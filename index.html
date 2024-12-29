@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Robotics</title>
+    <title>Zoriuns Site</title>
     <style>
         body {
             margin: 0;
@@ -13,6 +13,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             overflow: hidden;
         }
@@ -75,14 +76,35 @@
                 opacity: 0;
             }
         }
+
+        .comments {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #cccccc;
+            text-align: center;
+        }
+
+        .comments p {
+            margin: 10px 0;
+        }
+
+        .user {
+            font-weight: bold;
+            color: #00e0ff;
+        }
     </style>
 </head>
 <body>
     <div class="animation"></div>
     <div class="container">
-        <h1>Zoriuns Inc.</h1>
-        <p>Inovando sempre, criando um futuro usando nossas Inteligências Artificiais.</p>
+        <h1>Zoriuns Inc. </h1>
+        <p>Innovating the future of robotics, today.</p>
         <a class="button" href="https://www.youtube.com/watch?v=H8ZH_mkfPUY" target="_blank">Saiba Mais</a>
+    </div>
+    <div class="comments">
+        <p><span class="user">Irineu:</span> sla.</p>
+        <p><span class="user">Maria:</span> A experiência com os dispositivos deles são muito bom.</p>
+        <p><span class="user">Carlos:</span> Os robôs deles são incríveis, recomendo.</p>
     </div>
 </body>
 </html>
