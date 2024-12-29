@@ -1,110 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoriuns Site</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0f0f0f;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Da Zoriuns</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: #00d4ff;
+    }
 
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            background: linear-gradient(90deg, #00e0ff, #00ff9f);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      text-align: center;
+      max-width: 600px;
+    }
 
-        p {
-            font-size: 1.2rem;
-            color: #cccccc;
-            margin: 20px 0;
-        }
+    .button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background: #00d4ff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 1rem;
-            font-weight: bold;
-            color: #ffffff;
-            background-color: #1f1f1f;
-            border: 2px solid #00e0ff;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s, border-color 0.3s;
-        }
+    .button:hover {
+      background: #007d99;
+    }
 
-        .button:hover {
-            background-color: #00e0ff;
-            border-color: #00ff9f;
-        }
+    .comments-section {
+      margin-top: 40px;
+      width: 80%;
+      max-width: 600px;
+      text-align: left;
+    }
 
-        .animation {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 150%;
-            height: 150%;
-            background: radial-gradient(circle, #00e0ff20, transparent);
-            animation: pulse 5s infinite;
-            transform: translate(-50%, -50%);
-        }
+    .comment {
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 4px solid #00d4ff;
+      background: #2a2a2a;
+    }
 
-        @keyframes pulse {
-            0% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.7;
-            }
-            100% {
-                transform: translate(-50%, -50%) scale(1.5);
-                opacity: 0;
-            }
-        }
+    .rating-form {
+      margin-top: 20px;
+      text-align: center;
+    }
 
-        .comments {
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #cccccc;
-            text-align: center;
-        }
+    .rating-form input,
+    .rating-form button {
+      padding: 10px;
+      font-size: 1rem;
+      margin: 5px;
+    }
 
-        .comments p {
-            margin: 10px 0;
-        }
+    .rating-form button {
+      background: #ff4d4d;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-        .user {
-            font-weight: bold;
-            color: #00e0ff;
-        }
-    </style>
+    .rating-form button:hover {
+      background: #cc0000;
+    }
+  </style>
 </head>
 <body>
-    <div class="animation"></div>
-    <div class="container">
-        <h1>Zoriuns Inc.</h1>
-        <p>Innovating the future of robotics, today.</p>
-        <a class="button" href="https://www.example.com" target="_blank">Saiba Mais</a>
-    </div>
-    <div class="comments">
-        <p><span class="user">Irineu:</span> O site é muito interessante e direto ao ponto!</p>
-        <p><span class="user">Maria:</span> A experiência com os dispositivos deles é incrível, muito funcional.</p>
-        <p><span class="user">Carlos:</span> Os robôs são realmente impressionantes, recomendo fortemente.</p>
-    </div>
+  <h1>Bem-vindo ao Futuro</h1>
+  <p>Explore nosso dispositivos inovador e descubra uma nova experiência tecnológica.</p>
+  <button class="button" onclick="saibaMais()">Saiba Mais</button>
+
+  <div class="comments-section">
+    <h2>Avaliações de Usuários</h2>
+    <div class="comment">"Simplesmente incrível! O design é futurista e fácil de usar." - João S.</div>
+    <div class="comment">"Adorei o conceito minimalista. Muito intuitivo." - Maria F.</div>
+    <div class="comment">"Surpreendente! Mal posso esperar para ver mais novidades." - Ana T.</div>
+  </div>
+
+  <div class="rating-form">
+    <h2>Avalie o site:</h2>
+    <input type="text" placeholder="Seu Nome" id="name">
+    <input type="number" placeholder="Nota (1-5)" min="1" max="5" id="rating">
+    <button onclick="avaliar()">Enviar Avaliação</button>
+  </div>
+
+  <script>
+    function saibaMais() {
+      window.open('https://www.youtube.com/watch?v=H8ZH_mkfPUY', '_blank'); // Substitua "https://www.exemplo.com" pelo link desejado.
+    }
+
+    function avaliar() {
+      alert('Error 284');
+      window.close();
+    }
+  </script>
 </body>
 </html>
