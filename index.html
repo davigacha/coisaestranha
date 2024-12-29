@@ -3,66 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Da Zoriuns</title>
+  <title>Site da Zoriuns</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1a1a1a, #333);
-      color: #f0f0f0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
+      color: #e0e0e0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      overflow: hidden;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 20px;
       text-transform: uppercase;
-      color: #00d4ff;
+      color: #00ffc3;
+      text-shadow: 0 0 10px #00ffc3, 0 0 20px #00d4ff;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin: 10px 0;
       text-align: center;
-      max-width: 600px;
+      max-width: 700px;
+      color: #cccccc;
+      line-height: 1.6;
     }
 
     .button {
       margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 1rem;
+      padding: 15px 30px;
+      font-size: 1.2rem;
       color: #fff;
-      background: #00d4ff;
+      background: linear-gradient(90deg, #00d4ff, #00ffc3);
       border: none;
-      border-radius: 5px;
+      border-radius: 30px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 255, 195, 0.4);
     }
 
     .button:hover {
-      background: #007d99;
+      background: linear-gradient(90deg, #00ffc3, #00d4ff);
+      transform: scale(1.1);
     }
 
     .comments-section {
       margin-top: 40px;
-      width: 80%;
-      max-width: 600px;
+      width: 90%;
+      max-width: 700px;
       text-align: left;
     }
 
     .comment {
       margin: 10px 0;
-      padding: 10px;
-      border-left: 4px solid #00d4ff;
-      background: #2a2a2a;
+      padding: 15px;
+      border-left: 5px solid #00ffc3;
+      background: #1c1c1c;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     .rating-form {
-      margin-top: 20px;
+      margin-top: 40px;
       text-align: center;
     }
 
@@ -71,10 +79,14 @@
       padding: 10px;
       font-size: 1rem;
       margin: 5px;
+      border: 1px solid #00ffc3;
+      border-radius: 5px;
+      background: #2a2a2a;
+      color: #fff;
     }
 
     .rating-form button {
-      background: #ff4d4d;
+      background: linear-gradient(90deg, #ff4d4d, #ff7575);
       color: #fff;
       border: none;
       cursor: pointer;
@@ -82,20 +94,29 @@
     }
 
     .rating-form button:hover {
-      background: #cc0000;
+      background: linear-gradient(90deg, #ff7575, #ff4d4d);
+      transform: scale(1.1);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      color: #666;
+      font-size: 0.9rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <h1>Bem-vindo ao Futuro</h1>
-  <p>Explore nosso dispositivos inovador e descubra uma nova experiência tecnológica.</p>
+  <p>Experimente dispositivos e designs inovadores, criados para redefinir o que é possível.</p>
   <button class="button" onclick="saibaMais()">Saiba Mais</button>
 
   <div class="comments-section">
     <h2>Avaliações de Usuários</h2>
-    <div class="comment">"Simplesmente incrível! O design é futurista e fácil de usar." - João S.</div>
-    <div class="comment">"Adorei o conceito minimalista. Muito intuitivo." - Maria F.</div>
-    <div class="comment">"Surpreendente! Mal posso esperar para ver mais novidades." - Ana T.</div>
+    <div class="comment">"Visual incrível, parece algo diretamente do futuro!" - Lucas P.</div>
+    <div class="comment">"A experiência foi totalmente imersiva e cativante." - Gabriela R.</div>
+    <div class="comment">"Incrível como o design é intuitivo e futurista ao mesmo tempo." - Felipe D.</div>
   </div>
 
   <div class="rating-form">
@@ -105,9 +126,13 @@
     <button onclick="avaliar()">Enviar Avaliação</button>
   </div>
 
+  <footer>
+    © 2024 Zoriuns. Todos os direitos reservados.
+  </footer>
+
   <script>
     function saibaMais() {
-      window.open('https://www.youtube.com/watch?v=H8ZH_mkfPUY', '_blank'); // Substitua "https://www.exemplo.com" pelo link desejado.
+      window.open('https://www.youtube.com/watch?v=H8ZH_mkfPUY', '_blank'); // Substitua o link aqui.
     }
 
     function avaliar() {
